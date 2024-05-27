@@ -1,0 +1,90 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+      <span class="brand-text font-weight-light">FACULTY CLEARANCE</span>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block">{{ user.username }}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="/add_facultyadmin" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Add Faculty Administrators
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/manage_facultyadmin" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Manage Faculty Administrators
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/add_student" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Add Student
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/manage_student" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Manage Student
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/add_faculty" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Add Faculty
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/manage_faculty" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Manage Faculty
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/add_course" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Add Course
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="/manage_course" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Manage Course
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

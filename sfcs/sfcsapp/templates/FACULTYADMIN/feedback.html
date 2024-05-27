@@ -1,0 +1,54 @@
+{% extends 'FACULTYADMIN/base.html' %}
+{% block page_title %}
+Student Feedback
+{% endblock page_title %}
+{% block main_content %}
+<!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-12">
+            <!-- general form elements -->
+
+            <!-- /.card -->
+                  <div class="card card-warning">
+                     <div class="card-header">
+                        <h3 class="card-title">Student Feedback</h3>
+                     </div>
+
+                    <div class="table"></div>
+                    <table class="table">
+                      <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Message</th>
+                        <th>Sent on</th>
+                        <th>Reply</th>
+                      </tr>
+                      {% for feedback in feedbacks %}
+                      <tr>
+                             <td>{{ feedback.id }}</td>
+                             <td>{{ feedback.student_id.admin.id }}</td>
+                             <td>{{ feedback.student_id.admin.first_name }} {{ feedback.student_id.admin.last_name }}</td>
+                             <td>{{ feedback.feedback }}</td>
+                             <td>{{ feedback.created_at }}</td>
+                             <td>
+                                 {% if feedback.feedback_reply == "" %}
+                                 <button class="btn btn-success">Reply</button>
+                                 {% else %}
+                                 {{ feedback.feedback_reply }}
+                                 {% endif %}
+                             </td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                    </div>
+                  </div>
+
+
+            </div>
+            </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}
